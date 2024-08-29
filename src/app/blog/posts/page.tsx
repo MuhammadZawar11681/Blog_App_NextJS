@@ -1,7 +1,5 @@
 import Link from "next/link"
-
 import { Button } from "@/app/ui/components/button"
-// import { posts } from '@/app/lib/placeholder-data';
 import Post from '@/app/ui/components/posts/Post';
 import { connectToDB, getPosts } from '@/app/lib/data';
 import { auth } from "../../../../auth.config"
