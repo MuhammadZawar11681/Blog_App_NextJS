@@ -1,0 +1,21 @@
+/* about.module.css */
+.background {
+    background: linear-gradient(
+      to right,
+      #e0c3fc,
+      #8ec5fc
+    ); /* Gradient background */
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  @media (max-width: 768px) {
+    .background {
+      background: linear-gradient(
+        to right,
+        #8ec5fc,
+        #e0c3fc
+      ); /* Adjust gradient for mobile */
+    }
+  }
+  
