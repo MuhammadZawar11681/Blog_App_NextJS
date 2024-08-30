@@ -14,15 +14,23 @@ export default async function UserButton() {
   const session = await auth()
 
   if (!session?.user) return <SignIn />
-  return (
-    <div className="flex gap-2 items-center">
 
-      <span className="hidden text-sm sm:inline-flex">
-        {session.user.name}
+    const userName = session.user.name?.split(" ")[0];
+
+
+  return (
+     <div className="relative flex gap-2 items-center bg-gradient-to-r from-purple-500 to-pink-500 p-2 rounded-lg shadow-lg">
+
+
+       <span className="hidden text-sm sm:inline-flex text-white font-semibold">        
+       {userName}
       </span>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" className="relative w-8 h-8 rounded-full">
+        <Button
+            variant="ghost"
+             className="relative w-10 h-10 rounded-full p-1 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+           >
             <Avatar className="w-8 h-8">
               {session.user.image && (
                 <AvatarImage

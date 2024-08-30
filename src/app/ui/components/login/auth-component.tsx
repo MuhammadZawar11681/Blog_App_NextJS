@@ -12,7 +12,12 @@ export function SignIn({
         await signIn(provider)
       }}
     >
-      <Button {...props}>Sign In</Button>
+      <Button
+         {...props}
+         className="w-full p-0 bg-green-600 text-white hover:bg-yellow-500 transition-colors"
+       >
+         Sign In
+       </Button>
     </form>
   )
 }
@@ -26,9 +31,13 @@ export function SignOut(props: React.ComponentPropsWithRef<typeof Button>) {
       }}
       className="w-full"
     >
-      <Button variant="ghost" className="w-full p-0" {...props}>
-        Sign Out
-      </Button>
+      <Button
+       variant="destructive"
+         className="w-full p-0 bg-red-600 text-white hover:bg-red-700 transition-colors"
+         {...props}
+       >
+         Sign Out
+       </Button>
     </form>
   )
 }
