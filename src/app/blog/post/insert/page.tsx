@@ -92,7 +92,8 @@ export default function Page() {
 
   return (
     <div className="bg-white p-8 rounded shadow">
-      <h2 className="text-2xl mb-4 text-purple-700">New Blog Post</h2>
+      <h2 className="text-3xl mb-6 text-purple-800 font-bold text-center">Create a New Blog Post</h2>
+      <p className="text-gray-700 mb-6 text-center">You can generate blog content with AI by writing a topic title and clicking on "Generate Content". Alternatively, you can manually write your blog without AI assistance.</p>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="title" className="block font-medium">Title:</label>
